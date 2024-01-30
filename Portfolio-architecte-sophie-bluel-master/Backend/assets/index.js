@@ -1,6 +1,7 @@
 getWorks();
 getCate();
 
+//fonction pour generer les projets
 function genererReponse(works) {
     const gallery = document.getElementsByClassName("gallery")[0];
 
@@ -26,6 +27,7 @@ function genererReponse(works) {
     gallery.appendChild(fragment);
 }
 
+//fonction pour recuperer les projets
 function getWorks() {
     const urlWorks = "http://localhost:5678/api/works";
 
@@ -37,6 +39,7 @@ function getWorks() {
         });
 }
 
+//fonction pour créer les boutons de filtres
 function filtre(categories) {
     const buttonsContainer = document.getElementById("buttonsContainer");
     buttonsContainer.innerHTML = "";
@@ -64,6 +67,7 @@ function filtre(categories) {
     }
 }
 
+//fonction pour récuperer les catégories de l'api
 function getCate() {
     const urlCat = "http://localhost:5678/api/categories";
 
